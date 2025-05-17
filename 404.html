@@ -1,13 +1,43 @@
----
-import PageLayout from "@/";
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>wawa</title>
 
-const meta = {
-	description: "Oops! It looks like this page is lost in space!",
-	title: "Oops! You found a missing page!",
-};
----
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
 
-<PageLayout meta={meta}>
-	<h1 class="title mb-6">404 | Oops something went wrong</h1>
-	<p class="mb-8">Please use the navigation to find your way back</p>
-</PageLayout>
+    <title>wawa</title>
+
+    <meta content=":P" name="description"/>
+    <meta content="wawa" property="og:title"/>
+    <meta content=":P" property="og:description"/>
+    <meta content="wawa" property="twitter:title"/>
+    <meta content=":P" property="twitter:description"/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="theme-color" content="#ff6868">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+
+    <style>/*hnfront*/:root{--hn-ref-font-brand:"Dela Gothic One",sans-serif;--hn-ref-font-plain:"Roboto",sans-serif;--hn-sys-color-on-background:#fff;--hn-sys-color-accent:#3c3f44;--hn-sys-custom-color-hood-network-red:#ff6868;--hn-sys-grad-background:linear-gradient(0deg,#181b1e,#23272b);--hn-sys-grad-card:linear-gradient(to bottom right,#5a5c60,#3c4044)}html{min-height:100vh}body{background:var(--hn-sys-grad-background);margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 1em 15px}.product-logo{align-items:center;display:flex;flex-direction:row;gap:5px;user-select:none}.product-logo>svg{height:1em;fill:var(--hn-sys-custom-color-hood-network-red)}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.product-logo>svg:hover{animation:a 2s infinite}.product-logo>span{color:var(--hn-sys-color-on-background);font-family:var(--hn-ref-font-brand)}.card-wrapper{background:var(--hn-sys-grad-card);border-radius:8px;color:var(--hn-sys-color-on-background);padding:1px;position:relative}.card,.card-wrapper{overflow:hidden;width:100%}.card{background-color:var(--hn-sys-color-accent);border-radius:inherit;box-sizing:border-box;display:flex;flex-direction:column;font-family:var(--hn-ref-font-plain);gap:10px;padding:24px}.section{position:relative}.section>h1{font-family:var(--hn-ref-font-brand);margin:0}.content{display:flex;flex-direction:column}.avatar-row,.content{gap:1em;margin-top:10px}.avatar-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.avatar-row>a{aspect-ratio:1/1;border-radius:100%;height:auto;overflow:hidden;text-decoration:none;width:auto}.avatar-row>a>img{height:100%;width:100%}p{margin:0}p>a{color:var(--hn-sys-custom-color-hood-network-red)}.card-deco{bottom:-.25em;font-size:15em;opacity:.2;position:absolute;right:-.25em;user-select:none;width:1.5em}/*copyright 2025 hood network*/</style>
+</head>
+<body>
+    <header>
+        <div class="product-logo">
+            <span>wawa</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="card-wrapper">
+            <div class="card">
+                    <h1>404</h1>
+                    <p>maybe try returning back to the <a href="/">main page</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
