@@ -1,37 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>wawa</title>
+  <meta charset="UTF-8">
+  <title>evil.ave's tools and stuff idk</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .centered {
+      text-align: center;
+      margin-top: 100px;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+    .error-code {
+      font-size: 64px;
+      color: rgb(255, 27, 27);
+      margin-bottom: 10px;
+    }
 
-    <title>wawa</title>
+    .error-msg {
+      font-size: 24px;
+      color: #ccc;
+    }
 
-    <meta content=":P" name="description"/>
-    <meta content="wawa" property="og:title"/>
-    <meta content=":P" property="og:description"/>
-    <meta content="wawa" property="twitter:title"/>
-    <meta content=":P" property="twitter:description"/>
-    <meta property="og:type" content="website"/>
+    .error-terminal {
+      background-color: #000;
+      padding: 20px;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 700px;
+      border: 1px solid #333;
+      font-family: monospace;
+      color: rgb(0, 255, 0);
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
 
-    <meta name="theme-color" content="#ff6868">
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    .error-terminal span {
+      color: rgb(255, 27, 27);
+    }
 
-    <style>/*hnfront*/:root{--hn-ref-font-brand:"Dela Gothic One",sans-serif;--hn-ref-font-plain:"Roboto",sans-serif;--hn-sys-color-on-background:#fff;--hn-sys-color-accent:#3c3f44;--hn-sys-custom-color-hood-network-red:#ff6868;--hn-sys-grad-background:linear-gradient(0deg,#181b1e,#23272b);--hn-sys-grad-card:linear-gradient(to bottom right,#5a5c60,#3c4044)}html{min-height:100vh}body{background:var(--hn-sys-grad-background);margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 1em 15px}.product-logo{align-items:center;display:flex;flex-direction:row;gap:5px;user-select:none}.product-logo>svg{height:1em;fill:var(--hn-sys-custom-color-hood-network-red)}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.product-logo>svg:hover{animation:a 2s infinite}.product-logo>span{color:var(--hn-sys-color-on-background);font-family:var(--hn-ref-font-brand)}.card-wrapper{background:var(--hn-sys-grad-card);border-radius:8px;color:var(--hn-sys-color-on-background);padding:1px;position:relative}.card,.card-wrapper{overflow:hidden;width:100%}.card{background-color:var(--hn-sys-color-accent);border-radius:inherit;box-sizing:border-box;display:flex;flex-direction:column;font-family:var(--hn-ref-font-plain);gap:10px;padding:24px}.section{position:relative}.section>h1{font-family:var(--hn-ref-font-brand);margin:0}.content{display:flex;flex-direction:column}.avatar-row,.content{gap:1em;margin-top:10px}.avatar-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.avatar-row>a{aspect-ratio:1/1;border-radius:100%;height:auto;overflow:hidden;text-decoration:none;width:auto}.avatar-row>a>img{height:100%;width:100%}p{margin:0}p>a{color:var(--hn-sys-custom-color-hood-network-red)}.card-deco{bottom:-.25em;font-size:15em;opacity:.2;position:absolute;right:-.25em;user-select:none;width:1.5em}/*copyright 2025 hood network*/</style>
+    a.return-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: rgb(255, 219, 152);
+      text-decoration: none;
+    }
+
+    a.return-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <div class="card-wrapper">
-            <div class="card">
-                    <h1>404</h1>
-                    <p>maybe try returning back to the <a href="/">main page</a>?</p>
-                </div>
-            </div>
-        </div>
+  <div class="header">
+    <div class="system-info">
+      <span><b>made by:</b> evil.ave</span>
+      <span><b>total tools:</b> 6</span>
+      <span><b>last updated:</b> 6 aug 2025</span>
+      <span><b>version:</b> v2.16</span>
+        
     </div>
+    <div class="path">
+      <code>Warning placeholder</code>
+    </div>
+  </div>
+
+  <div class="centered">
+    <div class="error-code">[ 404 ]</div>
+    <div class="error-msg">Target resource unreachable.</div>
+
+    <div class="error-terminal">
+      <strong>something went wrong :/</strong><br>
+      <span>error:</span> 404 — invalid request, target does not exist.
+    </div>
+
+    <a class="return-link" href="/">[ return to the main page ]</a>
+  </div>
 </body>
 </html>
