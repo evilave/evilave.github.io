@@ -1,103 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>wawa</title>
+  <meta charset="UTF-8">
+  <title>evil.ave's tools and stuff idk</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="evilave's tools and stuff" />
+  <meta property="og:description" content="stuff" />
+  <meta property="og:url" content="https://evilave.github.io/" />
+  <meta name="theme-color" content="#0f0" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://github.com" crossorigin>
+    .page-container {
+      flex: 1;
+    }
 
-    <title>wawa</title>
-    <title>wawa</title>
+    .red-text {
+      color: rgb(255, 27, 27);
+    }
 
-    <meta content="evil" name="description"/>
-    <meta content="evil" property="og:title"/>
-    <meta content="Discord Tools" property="og:description"/>
-    <meta content="Discord Tools" property="twitter:description"/>
-    <meta property="og:type" content="website"/>
+    .site-footer {
+      background-color: #000;
+      color: #888;
+      font-size: 13px;
+      text-align: center;
+      padding: 15px 10px;
+      border-top: 1px solid #444;
+    }
 
-    <div class="content">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="section">
-                    <h1>Special thanks to:</h1>
-                    <p>• eva.x1c for helping.</p>
-                        </a>
-                    <p>• Discord Previews for sparking my interest.</p>
-                        </a>
-                    <p>• and gdnimble for helping me create this website</p>
-                </div>
-            </div>
-        </div>
+    .site-footer .warning {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div class="header">
+      <div class="system-info">
+        <span><b>special thanks: </b> me ofc, eva, gdnimble, cool people in my discord server</span>
+        <span><b>total tools:</b> 2</span>
+        <span><b>last updated:</b> 1 aug 2025</span>
+      </div>
+      <div class="path">
+        <code>for more info about stuff, ask us in our support server</code>
+      </div>
+      <div class="tabs">
+        <a class="tab-link active" onclick="showTab('toolkits')">[ Toolkits ]</a>
+        <a class="tab-link" onclick="showTab('1')">[ stuff ]</a>
+        <a class="tab-link" onclick="showTab('2')">[ more stuff ]</a>
+        <a class="tab-link" onclick="showTab('3')">[ even more stuff ]</a>
+        <a class="tab-link" onclick="showTab('4')">[ so many stuff ]</a>
+        <a class="tab-link" onclick="showTab('5')">[ idk what to say anymore ]</a>
+      </div>
     </div>
-    <style>:root{--hn-ref-font-brand:"Dela Gothic One",sans-serif;--hn-ref-font-plain:"Roboto",sans-serif;--hn-sys-color-on-background:#fff;--hn-sys-color-accent:#3c3f44;--hn-sys-custom-color-hood-network-red:#ff6868;--hn-sys-grad-background:linear-gradient(0deg,#181b1e,#23272b);--hn-sys-grad-card:linear-gradient(to bottom right,#5a5c60,#3c4044)}html{min-height:100vh}body{background:var(--hn-sys-grad-background);margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 1em 15px}.product-logo{align-items:center;display:flex;flex-direction:row;gap:5px;user-select:none}.product-logo>svg{height:1em;fill:var(--hn-sys-custom-color-hood-network-red)}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.product-logo>svg:hover{animation:a 2s infinite}.product-logo>span{color:var(--hn-sys-color-on-background);font-family:var(--hn-ref-font-brand)}.card-wrapper{background:var(--hn-sys-grad-card);border-radius:8px;color:var(--hn-sys-color-on-background);padding:1px;position:relative}.card,.card-wrapper{overflow:hidden;width:100%}.card{background-color:var(--hn-sys-color-accent);border-radius:inherit;box-sizing:border-box;display:flex;flex-direction:column;font-family:var(--hn-ref-font-plain);gap:10px;padding:24px}.section{position:relative}.section>h1{font-family:var(--hn-ref-font-brand);margin:0}.content{display:flex;flex-direction:column}.avatar-row,.content{gap:1em;margin-top:10px}.avatar-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr))}.avatar-row>a{aspect-ratio:1/1;border-radius:100%;height:auto;overflow:hidden;text-decoration:none;width:auto}.avatar-row>a>img{height:100%;width:100%}p{margin:0}p>a{color:var(--hn-sys-custom-color-hood-network-red)}.card-deco{bottom:-.25em;font-size:15em;opacity:.2;position:absolute;right:-.25em;user-select:none;width:1.5em}/*:P*/</style>
-    <div class="content">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="section">
-                    <h1>Tools</h1>
-                    <p>I use <a href="https://nelly.tools">Nelly Tools</a>.</p>
-                        </a>
-                    <p>and also <a href="https://github.com/Dziurwa14">bread boi's</a> github.</p>
-                        </a>
-                    <p>:P</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="section">
-                    <h1>Server Tags</h1>
-                    <p>First one is the main server, and the others are private to individual boosters.</p>
-                        </a>
-                    <div class="avatar-row">
-                        <a title="tag server1" href="https://discord.gg/arA7TyReHP">
-                            <img src="./media/guildtag (6).png" alt="server tag 1">
-                        </a>
-                        <a title="tag server2" href="https://discord.gg/BFybaYFR8Y">
-                            <img src="./media/guildtag (8).png" alt="server tag 2">
-                        </a>
-                        <a title="tag server3" href="https://discord.gg/dxAtw62vwr">
-                            <img src="./media/guildtag (9).png" alt="server tag 3">
-                        </a>
-                         <a title="tag server4" href="https://discord.gg/DHJCgF8KfVr">
-                            <img src="./media/guildtag (7).png" alt="server tag 3">
-                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- TOOLz TAB :P -->
+    <div class="tab-content active" id="toolkits">
+      <h1>stuff</h1>
+      <p>this is the stuff u can use or not use idk</p>
+      <table>
+        <thead>
+          <tr>
+            <th>tool name</th>
+            <th>description</th>
+            <th>added date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">virus.exe</a></td>
+            <td>test</td>
+            <td>1 aug 2025</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <!-- FILES TAB -->
+    <div class="tab-content" id="files">
+      <h1>Files</h1>
+      <p>This tab could list your raw scripts, documents, licenses, or archives.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Modified</th>
+            <th>Permissions</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">IP Lookup.py</a></td>
+            <td>N/a MB</td>
+            <td>2025-08-01</td>
+            <td>User</td>
+              <td><a href="https://raw.githubusercontent.com/OpBloody/riots-hub/refs/heads/main/single_files/ip_lookup.py" target="_blank" rel="noopener noreferrer">[Download]</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Port Scanner.py</a></td>
+            <td>N/a MB</td>
+            <td>2025-08-01</td>
+            <td>User</td>
+              <td><a href="https://raw.githubusercontent.com/OpBloody/riots-hub/refs/heads/main/single_files/port_scanner.py" target="_blank" rel="noopener noreferrer">[Download]</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">DNS Lookup.py</a></td>
+            <td>N/a MB</td>
+            <td>2025-08-01</td>
+            <td>User</td>
+              <td><a href="https://raw.githubusercontent.com/OpBloody/riots-hub/refs/heads/main/single_files/dns_lookup.py" target="_blank" rel="noopener noreferrer">[Download]</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">NSLookup.py</a></td>
+            <td>N/a MB</td>
+            <td>2025-08-01</td>
+            <td>User</td>
+              <td><a href="https://raw.githubusercontent.com/OpBloody/riots-hub/refs/heads/main/single_files/NSLookup.py" target="_blank" rel="noopener noreferrer">[Download]</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NETWORK TAB -->
+    <div class="tab-content" id="network">
+      <h1>Network Tools</h1>
+      <p>Include tools like Wireshark captures, TCP dumpers, or packet sniffers here.</p>
+      <p><span class="red-text">There are currently no available Network Tools listed.</span></p>
+    </div>
+
+    <!-- RECON TAB -->
+    <div class="tab-content" id="recon">
+      <h1>Reconnaissance Tools</h1>
+      <p>Tools for gathering information on targets: WHOIS, DNS lookups, etc.</p>
+      <p><span class="red-text">There are currently no available Reconnaissance Tools listed.</span></p>
+    </div>
+
+    <!-- EXPLOITS TAB -->
+    <div class="tab-content" id="exploits">
+      <h1>Exploit Kits</h1>
+      <p>Payloads, Exploits, Scripts, Game exploits, etc.</p>
+      <p><span class="red-text">There are currently no available exploit kits listed.</span></p>
+    </div>
+
+    <!-- WORDLISTS TAB -->
+    <div class="tab-content" id="wordlists">
+      <h1>Wordlists & Dictionaries</h1>
+      <p>RockYou.txt, SecLists, custom password lists, etc.</p>
+      <p><span class="red-text">There are currently no available Wordlists or Dictionaries listed.</span></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>
+      this website is does <strong>not</strong> contain any malware or anything. the files are <strong>only </strong>for testing purposes. <span class="warning">do not downlaod stuff if u dont know what it does.</span>
+    </p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      const contents = document.querySelectorAll('.tab-content');
+      const links = document.querySelectorAll('.tab-link');
+
+      contents.forEach(c => c.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
-
-    <div class="content">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="section">
-                    <h1>Usefull Discord bots</h1>
-                    <p>• <a href="https://discord.com/oauth2/authorize?client_id=682654466453012553">LabsCore</p>
-                        </a>
-                    <p>• <a href="https://discord.com/oauth2/authorize?client_id=1313209942177742928">Info Bot</p>
-                        </a>
-                    <p>• <a href="https://discord.com/oauth2/authorize?client_id=1337322312457781342">Custom Verification Bot</p>
-                        </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="card-wrapper">
-            <div class="card">
-                <div class="section">
-                    <h1>Coming soon...</h1>
-                    <p>...</p>
-                        </a>
-                    <p>...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+</html>
