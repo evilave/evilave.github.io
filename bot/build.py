@@ -51,7 +51,7 @@ python modules\start.py
         pause()
         cls()
         try:
-            print(colored("Starting Hydra...",'green'))
+            print(colored("Starting...",'green'))
             os.system("python modules\start.py")
         except Exception as e:
             print(colored(f"Error trying to run bot: {e}",'red'))
@@ -62,19 +62,18 @@ python modules\start.py
 
 def main():
     cls()
-    os.system("title Hydra Mass DM Bot by RIOT Administration")
-    print(colored("WARNING: Enable all 3 privileged gateway intents on the bot's page.",'red'))
-    print(colored("WARNING: Turn on developer mode from SETTINGS > Advanced > Developer mode",'red'))
-    print(colored("WARNING: Ensure the bot is invited in the server you are mass DMing members from.",'red'))
+    os.system("title evil.ave control panel")
+    print(colored("WARNING: make sure to enable all 3 privileged gateway intents on the bot's page.",'red'))
+    print(colored("WARNING: also turn on developer mode to get ids",'red'))
+    print(colored("WARNING: Ensure the bot is invited in the server",'red'))
     print("")
     pause()
     cls()
-    print(colored("  ___ ___            .___              ",'green'))
-    print(colored(" /   |   \ ___.__. __| _/___________   ",'green'))
-    print(colored("/    ~    <   |  |/ __ |\_  __ \__  \  ",'green'))
-    print(colored("\    Y    /\___  / /_/ | |  | \// __ \_",'green'))
-    print(colored(" \___|_  / / ____\____ | |__|  (____  /",'green'))
-    print(colored("       \/  \/         \/            \/ ",'green'))
+    print(colored("███████████████████████",'green'))
+    print(colored("█▄─▄▄─█▄─█─▄█▄─▄█▄─▄███",'green'))
+    print(colored("██─▄█▀██▄▀▄███─███─██▀█",'green'))
+    print(colored("▀▄▄▄▄▄▀▀▀▄▀▀▀▄▄▄▀▄▄▄▄▄▀",'green'))
+    print(colored("███████████████████████",'green'))
     print("")
     print("")
     prefix = input(colored("What prefix would you like for the bot? => ",'blue'))
@@ -109,4 +108,5 @@ Default guild ID: {guildid}
     botinit.setup()
 
 if __name__ == '__main__':
+
     main()
