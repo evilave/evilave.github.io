@@ -62,7 +62,7 @@ python modules\start.py
 
 def main():
     cls()
-    os.system("title evil.ave control panel")
+    os.system("title evilave.github.io control panel")
     print(colored("WARNING: make sure to enable all 3 privileged gateway intents on the bot's page.",'red'))
     print(colored("WARNING: also turn on developer mode to get ids",'red'))
     print(colored("WARNING: Ensure the bot is invited in the server",'red'))
@@ -110,3 +110,4 @@ Default guild ID: {guildid}
 if __name__ == '__main__':
 
     main()
+
