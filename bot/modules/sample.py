@@ -37,7 +37,7 @@ def command_validation(ctx):
         return False
 
 help_menu = f"""
-Available commands for the evilave.github.io :
+Available commands for evilave.github.io :
 
 **{prefix}help** - Show this message.
 
@@ -367,3 +367,4 @@ async def nuke(ctx, mode: str, channelamount=0, channelname="", *, message=""):
 os.system("title evilave.github.io")
 
 client.run(token)
+
