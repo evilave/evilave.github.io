@@ -6,38 +6,9 @@ $(function(){
         var avatar = $('#avatar').val();
         if (link==null || link=="",content==null || content=="")
         {
-            alert("Please Fill Out All The Fields");
+            alert("please fill out all the fields");
             return false;
         }
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
-        $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
         $.post(link, {"content": content, "username": username, "avatar_url": avatar,});
     });
 });
