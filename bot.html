@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>evil.ave's tools and stuff idk</title>
+  <link rel="stylesheet" href="https://evilave.github.io/styles.css">
+  <meta property="og:title" content="evilave's tools and stuff" />
+  <meta property="og:description" content="stuff" />
+  <meta property="og:url" content="https://evilave.github.io/styles.css" />
+  <meta name="theme-color" content="#0f0" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-container {
+      flex: 1;
+    }
+
+    .red-text {
+      color: rgb(255, 27, 27);
+    }
+
+    .site-footer {
+      background-color: #000;
+      color: #888;
+      font-size: 13px;
+      text-align: center;
+      padding: 15px 10px;
+      border-top: 1px solid #444;
+    }
+
+    .site-footer .warning {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div class="header">
+      <div class="system-info">
+        <span><b>made by:</b> evil.ave</span>
+        <span><b>total tools:</b> 10</span>
+        <span><b>last updated:</b> 15 aug 2025</span>
+        <span><b>version:</b> v2.20</span>
+      </div>
+      <div class="path">
+        <code>please use all the tools responsibly, and if you have any questions make sure to ask in our server</code>
+      </div>
+      <div class="tabs">
+        <a class="tab-link" href="https://evilave.github.io">[ back ]</a>
+      </div>
+    </div>
+
+    <!-- MAIN TAB :P -->
+    <div class="tab-content active" id="7">
+      <h1>evilave.github.io/bot/page</h1>
+      <p>files that need to be downloaded to use the bot. you can use your own bot token to use all the commands.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>modification date</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+           <td><a href="https://discord.com/oauth2/authorize?client_id=1234578910111213145">add the bot to a server</a></td>
+           <td>requires admin perm</td>
+           <td>1 aug 2025</td>
+           <td>unavailable</td>
+          </tr>
+          <tr>
+            <td><a href="https://evilave.github.io/bot/build_bot.bat">download build_bot.bat</a></td>
+            <td>startup file</td>
+            <td>2 aug 2025</td>
+            <td>available</td>
+          </tr>
+          <tr>
+            <td><a href="https://evilave.github.io/bot/build.py">download build.py</a></td>
+            <td>control panel</td>
+            <td>2 aug 2025</td>
+            <td>available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <footer class="site-footer">
+    <p>
+      <span class="warning">note: if the tool is not from evilave.github.io then be carefull when using it</span>
+    </p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      const contents = document.querySelectorAll('.tab-content');
+      const links = document.querySelectorAll('.tab-link');
+
+      contents.forEach(c => c.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
