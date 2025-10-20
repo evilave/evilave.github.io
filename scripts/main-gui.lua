@@ -1,3 +1,7 @@
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/main-gui.lua'))()
+--use the loadstring above and here is the full script. enjoy :D
+
+
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
@@ -175,11 +179,11 @@ PopularTitle.Font = Enum.Font.SourceSansBold
 PopularTitle.TextSize = 16
 PopularTitle.Parent = Popular
 
-local ScriptOrder = {"Inf Yield", "User Sniper", "EzHub", "99 Nights", "MM2", "Slap Battles", "Fling", "BladeBall"}
+local ScriptOrder = {"Inf_Yield", "Mobile_Fly", "Fling", "User_Sniper", "Emotes", "EzHub", "99_Nights", "MM2", "Slap_Battles", "BladeBall"}
 local Scripts = {
-	["Inf Yield"] = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source', true))() end,
-	["99 Nights"] = function() loadstring(game:HttpGet('https://nazuro.xyz/99nights', true))() end,
-	["Slap Battles"] = function()
+	["Inf_Yield"] = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source', true))() end,
+	["99_Nights"] = function() loadstring(game:HttpGet('https://nazuro.xyz/99nights', true))() end,
+	["Slap_Battles"] = function()
 		local plr = game.Players.LocalPlayer
 		function supaSiza(v)
 			if v:IsA("Tool") and v:FindFirstChild("Glove") then
@@ -192,7 +196,7 @@ local Scripts = {
 		plr.CharacterAdded:Connect(function(char) char.ChildAdded:Connect(supaSiza) end)
 	end,
 	["MM2"] = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub", true))() end,
-	["User Sniper"] = function()
+	["User_Sniper"] = function()
 		local Loader = [[
 function _INIT(requisite)
 	local Main
@@ -214,6 +218,8 @@ _INIT("https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/h
 	["EzHub"] = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua', true))() end,
 	["Fling"] = function() loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))() end,
 	["BladeBall"] = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Akash1al/Blade-Ball-Updated-Script/refs/heads/main/Blade-Ball-Script"))() end,
+	["Mobile_Fly"] = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end,
+	["Emotes"] = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ExploitFin/AquaMatrix/refs/heads/AquaMatrix/AquaMatrix"))() end,
 }
 
 local yOffset = 35
@@ -256,7 +262,7 @@ local FromBody = Instance.new("TextLabel")
 FromBody.Size = UDim2.new(1, -20, 1, -35)
 FromBody.Position = UDim2.new(0, 10, 0, 35)
 FromBody.BackgroundTransparency = 1
-FromBody.Text = "support server or suggestions here -> .gg/arA7TyReHP"
+FromBody.Text = "if you need support server or suggest smth join .gg/arA7TyReHP"
 FromBody.TextColor3 = Color3.fromRGB(200, 200, 200)
 FromBody.Font = Enum.Font.SourceSans
 FromBody.TextSize = 14
