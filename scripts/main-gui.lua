@@ -7,7 +7,7 @@ ScreenGui.ResetOnSpawn = false
 ScreenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
 
 ------------------------------------------------------------
--- THEME SYSTEM
+-- THEMES
 ------------------------------------------------------------
 local currentThemeColor = Color3.fromRGB(255, 0, 0)
 local themedObjects = {}
@@ -234,7 +234,7 @@ for _, name in ipairs(ScriptOrder) do
 end
 
 ------------------------------------------------------------
--- FROM CREATOR
+-- NEWS FRAME
 ------------------------------------------------------------
 local FromCreator = Instance.new("Frame")
 FromCreator.Size = UDim2.new(0, 250, 0, 200)
@@ -256,7 +256,7 @@ local FromBody = Instance.new("TextLabel")
 FromBody.Size = UDim2.new(1, -20, 1, -35)
 FromBody.Position = UDim2.new(0, 10, 0, 35)
 FromBody.BackgroundTransparency = 1
-FromBody.Text = "support or suggestions -> .gg/arA7TyReHP"
+FromBody.Text = "support server or suggestions here -> .gg/arA7TyReHP"
 FromBody.TextColor3 = Color3.fromRGB(200, 200, 200)
 FromBody.Font = Enum.Font.SourceSans
 FromBody.TextSize = 14
@@ -288,12 +288,18 @@ LogBody.Size = UDim2.new(1, -20, 1, -35)
 LogBody.Position = UDim2.new(0, 10, 0, 35)
 LogBody.BackgroundTransparency = 1
 LogBody.Text = [[
+20/10/25
+• Created new themes: blue, green, orange, purple, white
+• Added bladeball autoparry
+• Fixed frame bugs
+
+
 15/10/25
-Created new theme: red
-Created GUI menu
-Added tabs on the top
-Added buttons with the most used scripts
-Added scrollable tabs and theme colors
+• Created GUI menu
+• Created new theme: red
+• Added tabs on the top
+• Added buttons with the most used scripts
+• Made tabs scrollable
 ]]
 LogBody.TextColor3 = Color3.fromRGB(200, 200, 200)
 LogBody.Font = Enum.Font.SourceSans
@@ -303,11 +309,11 @@ LogBody.TextYAlignment = Enum.TextYAlignment.Top
 LogBody.Parent = StatusLog
 
 ------------------------------------------------------------
--- SETTINGS TAB (COLOR SELECTOR SMALL BOXES)
+-- SETTINGS TAB
 ------------------------------------------------------------
 local SettingsBox = Instance.new("Frame")
-SettingsBox.Size = UDim2.new(0, 350, 0, 120)
-SettingsBox.Position = UDim2.new(0, 120, 0, 60)
+SettingsBox.Size = UDim2.new(1, -40, 0, 120)
+SettingsBox.Position = UDim2.new(0, 20, 0, 60)
 SettingsBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 markThemed(SettingsBox)
 SettingsBox.Parent = SettingsPage
