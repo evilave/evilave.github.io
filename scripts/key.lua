@@ -97,9 +97,7 @@ CheckButton.MouseButton1Click:Connect(function()
 		Frame:Destroy()
 		
 		-- Placeholder script
-		local placeholderScript = Instance.new("Hint")
-		placeholderScript.Text = "✅ Placeholder script executed!"
-		placeholderScript.Parent = game.Workspace
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/main-gui.lua
 	else
 		print("❌ Incorrect Key.")
 		TextBox.Text = ""
