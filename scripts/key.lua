@@ -34,7 +34,7 @@ Title.Parent = Frame
 Title.BackgroundTransparency = 1
 Title.Size = UDim2.new(1, 0, 0, 40)
 Title.Position = UDim2.new(0, 0, 0, 0)
-Title.Text = "🔐 Key System"
+Title.Text = "ev scripts key"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 20
@@ -82,7 +82,7 @@ local correctKey = "EV-19880"
 CheckButton.MouseButton1Click:Connect(function()
 	local inputKey = TextBox.Text
 	if inputKey == correctKey then
-		print("✅ Correct Key! Executing script...")
+		print("Your key was correct.")
 		
 		-- Optional: Fade out GUI before removing
 		for i = 1, 10 do
@@ -97,14 +97,14 @@ CheckButton.MouseButton1Click:Connect(function()
 		Frame:Destroy()
 		
 		-- Placeholder script
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/main-gui.lua
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/main-gui.lua'))()
 	else
-		print("❌ Incorrect Key.")
+		print("Incorrect Key.")
 		TextBox.Text = ""
 		TextBox.PlaceholderText = "Wrong key, try again."
 	end
 end)
 
 GetKeyButton.MouseButton1Click:Connect(function()
-	print("🗝️ 'Get Key' button pressed (placeholder).")
+	print("Join the server for key")
 end)
