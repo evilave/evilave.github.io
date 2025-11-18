@@ -1,3 +1,4 @@
+--raw
 --// GUI Creation
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -76,9 +77,8 @@ GetKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 GetKeyButton.Font = Enum.Font.GothamBold
 GetKeyButton.TextSize = 14
 GetKeyButton.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard(https://discord.gg/arA7TyReHP) end)
-
-end
+	local ok = pcall(function() setclipboard("https://discord.gg/arA7TyReHP") end)
+end)
 
 --// Logic
 local correctKey = "test"
