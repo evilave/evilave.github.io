@@ -20,7 +20,7 @@ Frame.Size = UDim2.new(0, 300, 0, 200)
 Frame.Active = true
 Frame.Draggable = true
 
--- Red Border (Thin)
+-- Red Border 
 BorderFrame.Name = "Border"
 BorderFrame.Parent = Frame
 BorderFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -46,7 +46,7 @@ TextBox.BorderSizePixel = 1
 TextBox.BorderColor3 = Color3.fromRGB(200, 0, 0)
 TextBox.Position = UDim2.new(0.1, 0, 0.35, 0)
 TextBox.Size = UDim2.new(0.8, 0, 0, 30)
-TextBox.PlaceholderText = "Enter Key..."
+TextBox.PlaceholderText = "key = test"
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.Font = Enum.Font.Gotham
@@ -75,9 +75,13 @@ GetKeyButton.Text = "Get Key"
 GetKeyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 GetKeyButton.Font = Enum.Font.GothamBold
 GetKeyButton.TextSize = 14
+GetKeyButton.MouseButton1Click:Connect(function()
+	local ok = pcall(function() setclipboard(https://discord.gg/arA7TyReHP) end)
+
+end
 
 --// Logic
-local correctKey = "EV-19880"
+local correctKey = "test"
 
 CheckButton.MouseButton1Click:Connect(function()
 	local inputKey = TextBox.Text
@@ -96,8 +100,8 @@ CheckButton.MouseButton1Click:Connect(function()
 		
 		Frame:Destroy()
 		
-		-- Placeholder script
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/main-gui.lua'))()
+		-- destination
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/new-gui.lua'))()
 	else
 		print("Incorrect Key.")
 		TextBox.Text = ""
