@@ -1,4 +1,4 @@
---loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/new/main/scripts/new-gui'))()
+--loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/new-gui.lua'))()
 local e = Instance.new("ScreenGui")
 local m = Instance.new("Frame")
 local tb = Instance.new("Frame")
