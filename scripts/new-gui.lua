@@ -18,8 +18,10 @@ local ex = Instance.new("TextButton")
 local cl = Instance.new("TextButton")
 local cp = Instance.new("TextButton")
 local sb = Instance.new("TextLabel")
+
 local function S(n) return game:GetService(n) end
 local uis, gsv, txtsvc = S("UserInputService"), S("GuiService"), S("TextService")
+
 e.Name = "Exec"
 e.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 e.ResetOnSpawn = false
@@ -34,12 +36,12 @@ m.BorderSizePixel = 1
 m.Position = UDim2.new(0.5,-260,0.5,-200)
 m.Size = UDim2.new(0,550,0,350)
 
---tb
 tb.Name = "TopBar"
 tb.Parent = m
 tb.BackgroundColor3 = Color3.fromRGB(40,40,40)
 tb.BorderSizePixel = 1
 tb.Size = UDim2.new(1,0,0,32)
+
 tt.Name = "Title"
 tt.Parent = tb
 tt.BackgroundTransparency = 1
@@ -50,6 +52,7 @@ tt.Text = "EvEditor"
 tt.TextColor3 = Color3.new(1,1,1)
 tt.TextSize = 18
 tt.TextXAlignment = Enum.TextXAlignment.Left
+
 xt.Name = "Exit"
 xt.Parent = tb
 xt.Position = UDim2.new(1,-40,0,0)
@@ -59,7 +62,8 @@ xt.Font = Enum.Font.SourceSansBold
 xt.TextSize = 18
 xt.TextColor3 = Color3.fromRGB(255,120,120)
 xt.BackgroundColor3 = Color3.fromRGB(40,40,40)
-xt.BorderSizePixel = 
+xt.BorderSizePixel = 0
+
 mn.Name = "Min"
 mn.Parent = tb
 mn.Position = UDim2.new(1,-80,0,0)
@@ -70,6 +74,7 @@ mn.TextSize = 18
 mn.TextColor3 = Color3.new(1,1,1)
 mn.BackgroundColor3 = Color3.fromRGB(40,40,40)
 mn.BorderSizePixel = 0
+
 d.Name = "Sep"
 d.Parent = m
 d.BackgroundColor3 = Color3.fromRGB(60,60,60)
@@ -77,7 +82,6 @@ d.BorderSizePixel = 0
 d.Position = UDim2.new(0,0,0,32)
 d.Size = UDim2.new(1,0,0,2)
 
---why ts not work
 s.Name = "Scroll"
 s.Parent = m
 s.Active = true
@@ -88,7 +92,6 @@ s.ScrollBarThickness = 6
 s.BackgroundColor3 = Color3.fromRGB(20,20,20)
 s.BorderSizePixel = 1
 
---num
 ln.Name = "LineNum"
 ln.Parent = s
 ln.Position = UDim2.new(0,0,0,0)
@@ -102,7 +105,7 @@ ln.TextColor3 = Color3.fromRGB(180,180,180)
 ln.TextXAlignment = Enum.TextXAlignment.Right
 ln.TextYAlignment = Enum.TextYAlignment.Top
 
---FIX THIS
+--hightlght
 hl.Name = "HL"
 hl.Parent = s
 hl.Position = UDim2.new(0,46,0,0)
@@ -115,7 +118,6 @@ hl.TextXAlignment = Enum.TextXAlignment.Left
 hl.TextYAlignment = Enum.TextYAlignment.Top
 hl.RichText = true
 
---t
 t.Name = "Text"
 t.Parent = s
 t.Position = UDim2.new(0,46,0,0)
@@ -129,11 +131,13 @@ t.TextYAlignment = Enum.TextYAlignment.Top
 t.MultiLine = true
 t.ClearTextOnFocus = false
 t.TextWrapped = false
+
 caret.Name = "Caret"
 caret.Parent = s
 caret.BackgroundColor3 = Color3.new(1,1,1)
 caret.Size = UDim2.fromOffset(2,16)
 caret.Visible = false
+
 selLayer.Name = "SelLayer"
 selLayer.Parent = s
 selLayer.BackgroundTransparency = 1
@@ -144,6 +148,7 @@ bf.Parent = m
 bf.Position = UDim2.new(0,8,1,-76)
 bf.Size = UDim2.new(1,-16,0,40)
 bf.BackgroundTransparency = 1
+
 gl.Parent = bf
 gl.FillDirectionMaxCells = 3
 gl.CellPadding = UDim2.new(0,6,0,0)
@@ -179,6 +184,7 @@ sb.TextXAlignment = Enum.TextXAlignment.Left
 local dragging = false
 local dragStart
 local startPos
+
 tb.InputBegan:Connect(function(i)
 	if i.UserInputType == Enum.UserInputType.MouseButton1 then
 		dragging = true
@@ -189,6 +195,7 @@ tb.InputBegan:Connect(function(i)
 		end)
 	end
 end)
+
 uis.InputChanged:Connect(function(i)
 	if dragging and i.UserInputType == Enum.UserInputType.MouseMovement then
 		local delta = i.Position - dragStart
@@ -199,7 +206,7 @@ uis.InputChanged:Connect(function(i)
 	end
 end)
 
---bugged also
+-- BASIC SYNTAX HIGHLIGHTING (kept functional)
 local function esc(s) return s:gsub("&","&amp;"):gsub("<","&lt;"):gsub(">","&gt;") end
 local keywords = {"and","break","do","else","elseif","end","false","for","function","if","in","local","nil","not","or","repeat","return","then","true","until","while"}
 
@@ -211,7 +218,6 @@ local function colorize(txt)
 	return txt
 end
 
---line and hl
 local function updateLines()
 	local text = t.Text
 	local count = 1
@@ -317,6 +323,7 @@ mn.MouseButton1Click:Connect(function()
 end)
 
 
+--btns
 local tabsFrame = Instance.new("Frame")
 tabsFrame.Name = "Tabs"
 tabsFrame.Parent = m
@@ -324,10 +331,12 @@ tabsFrame.BackgroundColor3 = Color3.fromRGB(40,40,40)
 tabsFrame.BorderSizePixel = 1
 tabsFrame.Position = UDim2.new(1,-40,0,34)
 tabsFrame.Size = UDim2.new(0,40,1,-34)
+
 local tabLayout = Instance.new("UIListLayout")
 tabLayout.Parent = tabsFrame
 tabLayout.SortOrder = Enum.SortOrder.LayoutOrder
 tabLayout.Padding = UDim.new(0,6)
+
 local function makeTabButton(letter)
     local b = Instance.new("TextButton")
     b.Text = letter
@@ -340,10 +349,11 @@ local function makeTabButton(letter)
     b.Parent = tabsFrame
     return b
 end
+
 local editorTabBtn = makeTabButton("E")
 local scriptTabBtn = makeTabButton("S")
 
---page thingy
+--s page
 local scriptsPage = Instance.new("Frame")
 scriptsPage.Name = "ScriptsPage"
 scriptsPage.Parent = m
@@ -363,10 +373,10 @@ testBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn.Size = UDim2.new(0,150,0,40)
 testBtn.Position = UDim2.new(0,20,0,20)
 testBtn.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
---script buttons
+-- extra example buttons
 local testBtn2 = Instance.new("TextButton")
 testBtn2.Parent = scriptsPage
 testBtn2.Text = "99_nights"
@@ -375,9 +385,9 @@ testBtn2.TextSize = 18
 testBtn2.TextColor3 = Color3.new(1,1,1)
 testBtn2.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn2.Size = UDim2.new(0,150,0,40)
-testBtn2.Position = UDim2.new(0,20,0,50)
+testBtn2.Position = UDim2.new(0,20,0,70)
 testBtn2.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://nazuro.xyz/99nights'))()
+    loadstring(game:HttpGet('https://nazuro.xyz/99nights'))()
 end)
 
 local testBtn3 = Instance.new("TextButton")
@@ -388,9 +398,9 @@ testBtn3.TextSize = 18
 testBtn3.TextColor3 = Color3.new(1,1,1)
 testBtn3.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn3.Size = UDim2.new(0,150,0,40)
-testBtn3.Position = UDim2.new(0,20,0,80)
+testBtn3.Position = UDim2.new(0,20,0,120)
 testBtn3.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
 end)
 
 local testBtn4 = Instance.new("TextButton")
@@ -401,9 +411,9 @@ testBtn4.TextSize = 18
 testBtn4.TextColor3 = Color3.new(1,1,1)
 testBtn4.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn4.Size = UDim2.new(0,150,0,40)
-testBtn4.Position = UDim2.new(0,20,0,110)
+testBtn4.Position = UDim2.new(0,20,0,170)
 testBtn4.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Thuan6565/Script/refs/heads/main/SuperRingPartV2'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Thuan6565/Script/refs/heads/main/SuperRingPartV2'))()
 end)
 
 local testBtn5 = Instance.new("TextButton")
@@ -414,25 +424,12 @@ testBtn5.TextSize = 18
 testBtn5.TextColor3 = Color3.new(1,1,1)
 testBtn5.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn5.Size = UDim2.new(0,150,0,40)
-testBtn5.Position = UDim2.new(0,20,0,140)
+testBtn5.Position = UDim2.new(0,20,0,220)
 testBtn5.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()
 end)
 
-local testBtn6 = Instance.new("TextButton")
-testBtn6.Parent = scriptsPage
-testBtn6.Text = "Tsb_trashcan"
-testBtn6.Font = Enum.Font.SourceSansBold
-testBtn6.TextSize = 18
-testBtn6.TextColor3 = Color3.new(1,1,1)
-testBtn6.BackgroundColor3 = Color3.fromRGB(60,60,60)
-testBtn6.Size = UDim2.new(0,150,0,40)
-testBtn6.Position = UDim2.new(0,20,0,170)
-testBtn6.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()
-end)
-
---swich
+--tabs
 local function showEditor()
     scriptsPage.Visible = false
     s.Visible = true
