@@ -363,7 +363,7 @@ testBtn.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn.Size = UDim2.new(0,150,0,40)
 testBtn.Position = UDim2.new(0,20,0,20)
 testBtn.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()") end)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 --script buttons
@@ -375,9 +375,9 @@ testBtn2.TextSize = 18
 testBtn2.TextColor3 = Color3.new(1,1,1)
 testBtn2.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn2.Size = UDim2.new(0,150,0,40)
-testBtn2.Position = UDim2.new(0,20,0,70)
+testBtn2.Position = UDim2.new(0,20,0,50)
 testBtn2.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard("loadstring(game:HttpGet('https://nazuro.xyz/99nights'))()") end)
+	loadstring(game:HttpGet('https://nazuro.xyz/99nights'))()
 end)
 
 local testBtn3 = Instance.new("TextButton")
@@ -388,9 +388,9 @@ testBtn3.TextSize = 18
 testBtn3.TextColor3 = Color3.new(1,1,1)
 testBtn3.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn3.Size = UDim2.new(0,150,0,40)
-testBtn3.Position = UDim2.new(0,20,0,120)
+testBtn3.Position = UDim2.new(0,20,0,80)
 testBtn3.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard("https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt") end)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
 end)
 
 local testBtn4 = Instance.new("TextButton")
@@ -401,9 +401,9 @@ testBtn4.TextSize = 18
 testBtn4.TextColor3 = Color3.new(1,1,1)
 testBtn4.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn4.Size = UDim2.new(0,150,0,40)
-testBtn4.Position = UDim2.new(0,20,0,170)
+testBtn4.Position = UDim2.new(0,20,0,110)
 testBtn4.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/Thuan6565/Script/refs/heads/main/SuperRingPartV2'))()") end)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Thuan6565/Script/refs/heads/main/SuperRingPartV2'))()
 end)
 
 local testBtn5 = Instance.new("TextButton")
@@ -414,9 +414,22 @@ testBtn5.TextSize = 18
 testBtn5.TextColor3 = Color3.new(1,1,1)
 testBtn5.BackgroundColor3 = Color3.fromRGB(60,60,60)
 testBtn5.Size = UDim2.new(0,150,0,40)
-testBtn5.Position = UDim2.new(0,20,0,220)
+testBtn5.Position = UDim2.new(0,20,0,140)
 testBtn5.MouseButton1Click:Connect(function()
-	local ok = pcall(function() setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()") end)
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()
+end)
+
+local testBtn6 = Instance.new("TextButton")
+testBtn6.Parent = scriptsPage
+testBtn6.Text = "Tsb_trashcan"
+testBtn6.Font = Enum.Font.SourceSansBold
+testBtn6.TextSize = 18
+testBtn6.TextColor3 = Color3.new(1,1,1)
+testBtn6.BackgroundColor3 = Color3.fromRGB(60,60,60)
+testBtn6.Size = UDim2.new(0,150,0,40)
+testBtn6.Position = UDim2.new(0,20,0,170)
+testBtn6.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt'))()
 end)
 
 --swich
