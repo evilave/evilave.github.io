@@ -1,5 +1,4 @@
---raw
---// GUI Creation
+--loadstring here
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local BorderFrame = Instance.new("Frame")
@@ -11,7 +10,6 @@ local Title = Instance.new("TextLabel")
 ScreenGui.Name = "KeySystem"
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
---// Main Frame
 Frame.Name = "MainFrame"
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -21,7 +19,6 @@ Frame.Size = UDim2.new(0, 300, 0, 200)
 Frame.Active = true
 Frame.Draggable = true
 
--- Red Border 
 BorderFrame.Name = "Border"
 BorderFrame.Parent = Frame
 BorderFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -30,7 +27,6 @@ BorderFrame.Position = UDim2.new(0, -1, 0, -1)
 BorderFrame.Size = UDim2.new(1, 2, 1, 2)
 BorderFrame.ZIndex = 0
 
--- Title
 Title.Parent = Frame
 Title.BackgroundTransparency = 1
 Title.Size = UDim2.new(1, 0, 0, 40)
@@ -40,7 +36,6 @@ Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 20
 
--- TextBox
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 TextBox.BorderSizePixel = 1
@@ -53,7 +48,6 @@ TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.Font = Enum.Font.Gotham
 TextBox.TextSize = 16
 
--- Check Key Button
 CheckButton.Parent = Frame
 CheckButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 CheckButton.BorderSizePixel = 1
@@ -65,7 +59,6 @@ CheckButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CheckButton.Font = Enum.Font.GothamBold
 CheckButton.TextSize = 14
 
--- Get Key Button
 GetKeyButton.Parent = Frame
 GetKeyButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 GetKeyButton.BorderSizePixel = 1
@@ -80,7 +73,7 @@ GetKeyButton.MouseButton1Click:Connect(function()
 	local ok = pcall(function() setclipboard("https://discord.gg/arA7TyReHP") end)
 end)
 
---// Logic
+
 local correctKey = "test"
 
 CheckButton.MouseButton1Click:Connect(function()
@@ -88,7 +81,6 @@ CheckButton.MouseButton1Click:Connect(function()
 	if inputKey == correctKey then
 		print("Your key was correct.")
 		
-		-- Optional: Fade out GUI before removing
 		for i = 1, 10 do
 			Frame.BackgroundTransparency = i * 0.1
 			TextBox.BackgroundTransparency = i * 0.1
@@ -100,8 +92,7 @@ CheckButton.MouseButton1Click:Connect(function()
 		
 		Frame:Destroy()
 		
-		-- destination
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/evilave.github.io/refs/heads/main/scripts/new-gui.lua'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/evilave/scripts/gui.lua'))()
 	else
 		print("Incorrect Key.")
 		TextBox.Text = ""
